@@ -53,7 +53,7 @@ export async function fetchTrafficData(domain: string): Promise<TrafficData> {
       const payload = JSON.stringify({ q: cleanDomain });
 
       const options = {
-        hostname: "similarweb-api1.p.rapidapi.com",
+        hostname: "similarweb-real-time-api.p.rapidapi.com",
         port: 443,
         path: "/v1/visitsInfo",
         method: "POST",
