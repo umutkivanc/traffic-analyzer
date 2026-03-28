@@ -58,8 +58,8 @@ export async function fetchTrafficData(domain: string): Promise<TrafficData> {
         path: "/v1/visitsInfo",
         method: "POST",
         headers: {
-          "x-rapidapi-key": "process.env.RAPIDAPI_KEY",
-          "x-rapidapi-host": "process.env.RAPIDAPI_HOST",
+          "x-rapidapi-key": process.env.RAPIDAPI_KEY || "",
+          "x-rapidapi-host": process.env.RAPIDAPI_HOST || "",
           "Content-Type": "application/json",
           "Content-Length": Buffer.byteLength(payload),
         },
